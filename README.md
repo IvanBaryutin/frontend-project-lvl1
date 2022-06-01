@@ -1,7 +1,10 @@
 
 ## asciinema:
 [BrainEvenGame](https://asciinema.org/a/RplpeHncqmIbqLJzJq7rTfirD)
+
 [BrainCalcGame](https://asciinema.org/a/5O0Bo1vZ777zjNSeqIt3dShb3)
+
+[BrainGcdGame](https://asciinema.org/a/3GSpk1CN8ii7AmtLfK8LpUgjI)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions)
