@@ -18,6 +18,7 @@ const playGame = (description, game) => {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.)`);
+      console.log(`Let's try again, ${userName}!`);
       winner = false;
       break;
     }
