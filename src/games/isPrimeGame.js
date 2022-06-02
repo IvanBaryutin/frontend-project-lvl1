@@ -6,13 +6,12 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 // Функция проверки числа на простое число
 const isPrimeNumber = (num) => {
-  let res;
+  let res = true;
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       res = false;
       break;
     }
-    res = true;
   }
   return res;
 };
