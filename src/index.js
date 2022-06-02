@@ -14,7 +14,7 @@ const playGame = (description, game) => {
     const [randomNumber, correctAnswer] = game();
     console.log(`Question: ${randomNumber}`);
     answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
+    if (answer === String(correctAnswer)) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.)`);
