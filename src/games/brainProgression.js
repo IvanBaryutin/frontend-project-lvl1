@@ -1,5 +1,30 @@
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 
+import playGame from '../index.js';
+
+const description = 'What number is missing in the progression?';
+
+const genProgressionArr = (min, max) => {
+  const arr = [Math.floor(Math.random() * 10)];
+  const arrSize = Math.floor(Math.random() * (max - min) + min);
+  const progressionStep = Math.floor(Math.random() * 10);
+
+  for (let i = 0; i < arrSize; i += 1) {
+    arr.push(arr[i] + progressionStep);
+  }
+
+  return arr;
+};
+
+const brainProgression = () => {
+  const progression = genProgressionArr(5, 15);
+  const missedItemIndex = Math.floor(Math.random() * progression.length);
+  const correctAnswer = progression[missedItemIndex];
+  progression[missedItemIndex] = '..';
+  return [`Question: ${progression.join(' ')}`, correctAnswer];
+};
+
+/*
 export const brainProgression = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -47,3 +72,8 @@ export const brainProgression = () => {
 };
 
 export default brainProgression;
+*/
+
+const brainProgressionGame = () => playGame(description, brainProgression);
+
+export default brainProgressionGame;
