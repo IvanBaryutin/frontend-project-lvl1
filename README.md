@@ -8,6 +8,8 @@
 
 [BrainProgressionGame](https://asciinema.org/a/A4D0ysGq7Atxv8dZksESPhO3o)
 
+[BrainPrimeGame](https://asciinema.org/a/S0csV5DHcQ1MqOkQBhzSqZCtH)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
