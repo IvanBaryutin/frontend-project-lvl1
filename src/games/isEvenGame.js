@@ -11,6 +11,6 @@ const isEven = () => {
   return [randomNumber, correctAnswer];
 };
 
-const brainEvenGame = () => playGame(description, isEven);
+const startGame = () => playGame(description, isEven);
 
-export default brainEvenGame;
+export default startGame;

@@ -16,13 +16,13 @@ const isPrimeNumber = (num) => {
   return res;
 };
 
-export const isPrime = () => {
+export const genPrimeGame = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   const correctAnswer = isPrimeNumber(randomNumber) ? 'yes' : 'no';
 
   return [randomNumber, correctAnswer];
 };
 
-const brainPrimeGame = () => playGame(description, isPrime);
+const startGame = () => playGame(description, genPrimeGame);
 
-export default brainPrimeGame;
+export default startGame;

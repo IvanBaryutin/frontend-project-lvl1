@@ -4,7 +4,7 @@ import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const RandomCalculate = (a, b, oper) => {
+const genRandomCalculation = (a, b, oper) => {
   let answer = 0;
   switch (oper) {
     case '+':
@@ -24,15 +24,15 @@ const RandomCalculate = (a, b, oper) => {
 };
 
 // Функция калькуляции выражения
-const Calc = () => {
+const genCalcGame = () => {
   const operations = ['+', '-', '*'];
   const firstOperand = Math.floor(Math.random() * 100);
   const secondOperand = Math.floor(Math.random() * 100);
   const operation = operations[Math.floor(Math.random() * operations.length)];
-  const correctAnswer = RandomCalculate(firstOperand, secondOperand, operation);
+  const correctAnswer = genRandomCalculation(firstOperand, secondOperand, operation);
   return [`${firstOperand} ${operation} ${secondOperand}`, correctAnswer];
 };
 
-const brainCalcGame = () => playGame(description, Calc);
+const startGame = () => playGame(description, genCalcGame);
 
-export default brainCalcGame;
+export default startGame;

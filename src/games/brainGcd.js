@@ -12,7 +12,7 @@ const findGcd = (a, b) => {
   return a;
 };
 
-const brainGcd = () => {
+const genGcdGame = () => {
   const firstOperand = Math.floor(Math.random() * 100);
   const secondOperand = Math.floor(Math.random() * 100);
 
@@ -20,6 +20,6 @@ const brainGcd = () => {
   return [`${firstOperand} ${secondOperand}`, correctAnswer];
 };
 
-const brainGcdGame = () => playGame(description, brainGcd);
+const startGame = () => playGame(description, genGcdGame);
 
-export default brainGcdGame;
+export default startGame;

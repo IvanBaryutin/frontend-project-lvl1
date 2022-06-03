@@ -6,7 +6,7 @@ const playGame = (description, game) => {
   const numberOfRounds = 3; // Количество раундов
 
   const userName = sayHello();
-  let winner = true;
+  let isWinner = true;
   let answer = '';
   console.log(description);
 
@@ -19,11 +19,11 @@ const playGame = (description, game) => {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.)`);
       console.log(`Let's try again, ${userName}!`);
-      winner = false;
+      isWinner = false;
       break;
     }
   }
-  if (winner === true) {
+  if (isWinner === true) {
     console.log(`Congratulations, ${userName}!`);
   }
 };

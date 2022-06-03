@@ -17,7 +17,7 @@ const genProgressionArr = (min, max) => {
   return arr;
 };
 
-const brainProgression = () => {
+const genProgressionGame = () => {
   const progression = genProgressionArr(5, 15);
   const missedItemIndex = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[missedItemIndex];
@@ -25,6 +25,6 @@ const brainProgression = () => {
   return [`Question: ${progression.join(' ')}`, correctAnswer];
 };
 
-const brainProgressionGame = () => playGame(description, brainProgression);
+const startGame = () => playGame(description, genProgressionGame);
 
-export default brainProgressionGame;
+export default startGame;
