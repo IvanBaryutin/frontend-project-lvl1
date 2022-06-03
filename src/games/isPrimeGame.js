@@ -6,6 +6,7 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 // Функция проверки числа на простое число
 const isPrime = (num) => {
+  if (num < 2) { return false; }
   let res = true;
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
