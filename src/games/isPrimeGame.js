@@ -20,8 +20,8 @@ const isPrime = (num) => {
 export const genPrimeGame = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-
-  return [randomNumber, correctAnswer];
+  const question = randomNumber;
+  return [question, correctAnswer];
 };
 
 const startGame = () => playGame(description, genPrimeGame);

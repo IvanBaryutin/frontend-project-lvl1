@@ -11,8 +11,8 @@ const playGame = (description, game) => {
   console.log(description);
 
   for (let counter = 1; counter <= numberOfRounds; counter += 1) {
-    const [randomNumber, correctAnswer] = game();
-    console.log(`Question: ${randomNumber}`);
+    const [question, correctAnswer] = game();
+    console.log(`Question: ${question}`);
     answer = readlineSync.question('Your answer: ');
     if (answer === String(correctAnswer)) {
       console.log('Correct!');

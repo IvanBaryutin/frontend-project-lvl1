@@ -17,7 +17,8 @@ const genGcdGame = () => {
   const secondOperand = Math.floor(Math.random() * 100);
 
   const correctAnswer = findGcd(firstOperand, secondOperand);
-  return [`${firstOperand} ${secondOperand}`, correctAnswer];
+  const question = `${firstOperand} ${secondOperand}`;
+  return [question, correctAnswer];
 };
 
 const startGame = () => playGame(description, genGcdGame);

@@ -30,7 +30,8 @@ const genCalcGame = () => {
   const secondOperand = Math.floor(Math.random() * 100);
   const operation = operations[Math.floor(Math.random() * operations.length)];
   const correctAnswer = genRandomCalculation(firstOperand, secondOperand, operation);
-  return [`${firstOperand} ${operation} ${secondOperand}`, correctAnswer];
+  const question = `${firstOperand} ${operation} ${secondOperand}`;
+  return [question, correctAnswer];
 };
 
 const startGame = () => playGame(description, genCalcGame);

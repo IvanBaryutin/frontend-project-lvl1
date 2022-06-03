@@ -22,7 +22,8 @@ const genProgressionGame = () => {
   const missedItemIndex = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[missedItemIndex];
   progression[missedItemIndex] = '..';
-  return [`Question: ${progression.join(' ')}`, correctAnswer];
+  const question = `Question: ${progression.join(' ')}`;
+  return [question, correctAnswer];
 };
 
 const startGame = () => playGame(description, genProgressionGame);
