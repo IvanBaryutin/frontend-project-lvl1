@@ -4,7 +4,7 @@ import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const generateRandomCalculation = (firstOperand, secondOperand, operation) => {
+const calculateOperation = (firstOperand, secondOperand, operation) => {
   let answer = 0;
   switch (operation) {
     case '+':
@@ -29,7 +29,7 @@ const generateCalcGame = () => {
   const firstOperand = Math.floor(Math.random() * 100);
   const secondOperand = Math.floor(Math.random() * 100);
   const operation = operations[Math.floor(Math.random() * operations.length)];
-  const correctAnswer = generateRandomCalculation(firstOperand, secondOperand, operation);
+  const correctAnswer = calculateOperation(firstOperand, secondOperand, operation);
   const question = `${firstOperand} ${operation} ${secondOperand}`;
   return [question, correctAnswer];
 };
