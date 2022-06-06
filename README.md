@@ -1,4 +1,8 @@
 
+#### Hexlet tests and linter status:
+
+[![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/IvanBaryutin/frontend-project-lvl1/maintainability) [![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions)
+
 # Учебный проект «Игры разума»
 
 Проект выполнил Барютин Иван в рамках обучения в [Хекслет](https://ru.hexlet.io/) по программе «Фронтенд разработчик».
@@ -34,6 +38,3 @@
 ##### Brain Prime
 
 [![asciicast](https://asciinema.org/a/S0csV5DHcQ1MqOkQBhzSqZCtH.svg)](https://asciinema.org/a/S0csV5DHcQ1MqOkQBhzSqZCtH)
-
-#### Hexlet tests and linter status:
-[![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions)[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/IvanBaryutin/frontend-project-lvl1/maintainability)[![Actions Status](https://github.com/IvanBaryutin/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/IvanBaryutin/frontend-project-lvl1/actions)
