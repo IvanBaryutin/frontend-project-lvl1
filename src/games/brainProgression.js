@@ -5,9 +5,9 @@ import playGame from '../index.js';
 const description = 'What number is missing in the progression?';
 
 // Функция генерирования массива с прогрессией
-const genProgressionArr = (min, max) => {
+const generateProgressionArr = (minArraySize, maxArraySize) => {
   const arr = [Math.floor(Math.random() * 10)];
-  const arrSize = Math.floor(Math.random() * (max - min) + min);
+  const arrSize = Math.floor(Math.random() * (maxArraySize - minArraySize) + minArraySize);
   const progressionStep = Math.floor(Math.random() * 10);
 
   for (let i = 0; i < arrSize; i += 1) {
@@ -17,8 +17,8 @@ const genProgressionArr = (min, max) => {
   return arr;
 };
 
-const genProgressionGame = () => {
-  const progression = genProgressionArr(5, 15);
+const generateProgressionGame = () => {
+  const progression = generateProgressionArr(5, 15);
   const missedItemIndex = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[missedItemIndex];
   progression[missedItemIndex] = '..';
@@ -26,6 +26,6 @@ const genProgressionGame = () => {
   return [question, correctAnswer];
 };
 
-const startGame = () => playGame(description, genProgressionGame);
+const startGame = () => playGame(description, generateProgressionGame);
 
 export default startGame;

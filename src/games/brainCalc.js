@@ -4,17 +4,17 @@ import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const genRandomCalculation = (a, b, oper) => {
+const generateRandomCalculation = (firstOperand, secondOperand, operation) => {
   let answer = 0;
-  switch (oper) {
+  switch (operation) {
     case '+':
-      answer = a + b;
+      answer = firstOperand + secondOperand;
       break;
     case '-':
-      answer = a - b;
+      answer = firstOperand - secondOperand;
       break;
     case '*':
-      answer = a * b;
+      answer = firstOperand * secondOperand;
       break;
     default:
       answer = null;
@@ -24,16 +24,16 @@ const genRandomCalculation = (a, b, oper) => {
 };
 
 // Функция калькуляции выражения
-const genCalcGame = () => {
+const generateCalcGame = () => {
   const operations = ['+', '-', '*'];
   const firstOperand = Math.floor(Math.random() * 100);
   const secondOperand = Math.floor(Math.random() * 100);
   const operation = operations[Math.floor(Math.random() * operations.length)];
-  const correctAnswer = genRandomCalculation(firstOperand, secondOperand, operation);
+  const correctAnswer = generateRandomCalculation(firstOperand, secondOperand, operation);
   const question = `${firstOperand} ${operation} ${secondOperand}`;
   return [question, correctAnswer];
 };
 
-const startGame = () => playGame(description, genCalcGame);
+const startGame = () => playGame(description, generateCalcGame);
 
 export default startGame;

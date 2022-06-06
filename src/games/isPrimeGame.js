@@ -17,13 +17,13 @@ const isPrime = (num) => {
   return res;
 };
 
-export const genPrimeGame = () => {
+export const generatePrimeGame = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const question = randomNumber;
   return [question, correctAnswer];
 };
 
-const startGame = () => playGame(description, genPrimeGame);
+const startGame = () => playGame(description, generatePrimeGame);
 
 export default startGame;
