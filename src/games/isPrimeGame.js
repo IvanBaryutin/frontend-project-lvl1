@@ -21,7 +21,7 @@ export const generatePrimeGame = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const question = randomNumber;
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const startGame = () => playGame(description, generatePrimeGame);

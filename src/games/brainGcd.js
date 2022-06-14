@@ -18,7 +18,7 @@ const generateGcdGame = () => {
 
   const correctAnswer = findGcd(firstOperand, secondOperand);
   const question = `${firstOperand} ${secondOperand}`;
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const startGame = () => playGame(description, generateGcdGame);

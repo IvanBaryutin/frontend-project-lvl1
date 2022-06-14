@@ -9,7 +9,7 @@ const generateEvenGame = () => {
   const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
   const question = randomNumber;
 
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const startGame = () => playGame(description, generateEvenGame);

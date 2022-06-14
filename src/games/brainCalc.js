@@ -4,23 +4,14 @@ import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const calculateOperation = (firstOperand, secondOperand, operation) => {
-  let answer = 0;
+const calculate = (firstOperand, secondOperand, operation) => {
+  // let answer = 0;
   switch (operation) {
-    case '+':
-      answer = firstOperand + secondOperand;
-      break;
-    case '-':
-      answer = firstOperand - secondOperand;
-      break;
-    case '*':
-      answer = firstOperand * secondOperand;
-      break;
-    default:
-      answer = null;
-      break;
+    case '+': return firstOperand + secondOperand;
+    case '-': return firstOperand - secondOperand;
+    case '*': return firstOperand * secondOperand;
+    default: throw new Error(`Unknown math operation: '${operation}'!`);
   }
-  return answer;
 };
 
 // Функция калькуляции выражения
@@ -29,9 +20,9 @@ const generateCalcGame = () => {
   const firstOperand = Math.floor(Math.random() * 100);
   const secondOperand = Math.floor(Math.random() * 100);
   const operation = operations[Math.floor(Math.random() * operations.length)];
-  const correctAnswer = calculateOperation(firstOperand, secondOperand, operation);
+  const correctAnswer = calculate(firstOperand, secondOperand, operation);
   const question = `${firstOperand} ${operation} ${secondOperand}`;
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const startGame = () => playGame(description, generateCalcGame);

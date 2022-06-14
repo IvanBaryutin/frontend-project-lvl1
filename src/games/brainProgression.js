@@ -23,7 +23,7 @@ const generateProgressionGame = () => {
   const correctAnswer = progression[missedItemIndex];
   progression[missedItemIndex] = '..';
   const question = `Question: ${progression.join(' ')}`;
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const startGame = () => playGame(description, generateProgressionGame);
