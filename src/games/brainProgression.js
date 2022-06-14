@@ -1,27 +1,31 @@
-// import readlineSync from 'readline-sync';
-
+import generateRandomInt from '../utils.js';
 import playGame from '../index.js';
 
 const description = 'What number is missing in the progression?';
+const defaultProgressionLength = 9;
+const defaultMaxProgressionStep = 10;
+const defaultMaxValue = 100;
 
-// Функция генерирования массива с прогрессией
-const generateProgressionArr = (minArraySize, maxArraySize) => {
-  const arr = [Math.floor(Math.random() * 10)];
-  const arrSize = Math.floor(Math.random() * (maxArraySize - minArraySize) + minArraySize);
-  const progressionStep = Math.floor(Math.random() * 10);
-
-  for (let i = 0; i < arrSize; i += 1) {
-    arr.push(arr[i] + progressionStep);
+const generateProgression = (firstElementValue, progressionStep, length) => {
+  const progression = [firstElementValue];
+  for (let i = 0; i < length; i += 1) {
+    progression.push(progression[i] + progressionStep);
   }
 
-  return arr;
+  return progression;
 };
 
 const generateProgressionGame = () => {
-  const progression = generateProgressionArr(5, 15);
-  const missedItemIndex = Math.floor(Math.random() * progression.length);
+  const firstProgressionElementValue = generateRandomInt(defaultMaxValue);
+  const progressionStep = generateRandomInt(defaultMaxProgressionStep);
+  const progression = generateProgression(
+    firstProgressionElementValue,
+    progressionStep,
+    defaultProgressionLength,
+  );
+  const missedItemIndex = generateRandomInt(progression.length);
   const correctAnswer = progression[missedItemIndex];
-  progression[missedItemIndex] = '..';
+  progression.splice(missedItemIndex, 1, '..');
   const question = `Question: ${progression.join(' ')}`;
   return [question, String(correctAnswer)];
 };

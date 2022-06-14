@@ -15,14 +15,12 @@ const playGame = (description, generateRound) => {
     const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer !== String(correctAnswer)) {
+    if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.)`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-    // if (answer === String(correctAnswer)) {
     console.log('Correct!');
-    // }
   }
 
   console.log(`Congratulations, ${userName}!`);

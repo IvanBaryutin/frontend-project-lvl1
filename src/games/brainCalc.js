@@ -1,11 +1,13 @@
-// import readlineSync from 'readline-sync';
-
+import generateRandomInt from '../utils.js';
 import playGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
+const operations = ['+', '-', '*'];
+const defaultMaxRandomNumber = 100;
+
+// Функция калькуляции выражения
 const calculate = (firstOperand, secondOperand, operation) => {
-  // let answer = 0;
   switch (operation) {
     case '+': return firstOperand + secondOperand;
     case '-': return firstOperand - secondOperand;
@@ -14,12 +16,10 @@ const calculate = (firstOperand, secondOperand, operation) => {
   }
 };
 
-// Функция калькуляции выражения
 const generateCalcGame = () => {
-  const operations = ['+', '-', '*'];
-  const firstOperand = Math.floor(Math.random() * 100);
-  const secondOperand = Math.floor(Math.random() * 100);
-  const operation = operations[Math.floor(Math.random() * operations.length)];
+  const firstOperand = generateRandomInt(defaultMaxRandomNumber);
+  const secondOperand = generateRandomInt(defaultMaxRandomNumber);
+  const operation = operations[generateRandomInt(operations.length)];
   const correctAnswer = calculate(firstOperand, secondOperand, operation);
   const question = `${firstOperand} ${operation} ${secondOperand}`;
   return [question, String(correctAnswer)];
