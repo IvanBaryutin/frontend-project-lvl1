@@ -2,6 +2,7 @@ import generateRandomInt from '../utils.js';
 import playGame from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const defaultMaxRandomNumber = 100;
 
 // Функция проверки числа на простое число
 const isPrime = (num) => {
@@ -17,7 +18,7 @@ const isPrime = (num) => {
 };
 
 export const generatePrimeGame = () => {
-  const randomNumber = generateRandomInt(100);
+  const randomNumber = generateRandomInt(defaultMaxRandomNumber);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const question = randomNumber;
   return [question, String(correctAnswer)];
