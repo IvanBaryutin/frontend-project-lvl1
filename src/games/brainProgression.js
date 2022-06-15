@@ -7,9 +7,13 @@ const defaultMaxProgressionStep = 10;
 const defaultMaxValue = 100;
 
 const generateProgression = (firstElementValue, progressionStep, length) => {
-  const progression = [firstElementValue];
-  for (let i = 0; i < length; i += 1) {
-    progression.push(progression[i] + progressionStep);
+  console.log(`firstElementValue ${firstElementValue}`);
+  console.log(`progressionStep ${progressionStep}`);
+  console.log(`length ${length}`);
+  const progression = [];
+  for (let i = 1; i <= length; i += 1) {
+    const term = (i === 1) ? firstElementValue : firstElementValue + progressionStep * (i - 1);
+    progression.push(term);
   }
 
   return progression;
@@ -24,8 +28,7 @@ const generateProgressionGame = () => {
     defaultProgressionLength,
   );
   const missedItemIndex = generateRandomInt(progression.length);
-  const correctAnswer = progression[missedItemIndex];
-  progression.splice(missedItemIndex, 1, '..');
+  const correctAnswer = progression.splice(missedItemIndex, 1, '..');
   const question = `Question: ${progression.join(' ')}`;
   return [question, String(correctAnswer)];
 };

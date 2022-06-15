@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const RoundsCount = 3; // Количество раундов
+const roundsCount = 3; // Количество раундов
 
 // Общая функция запуска игры
 const playGame = (description, generateRound) => {
@@ -11,7 +11,7 @@ const playGame = (description, generateRound) => {
 
   console.log(description);
 
-  for (let counter = 1; counter <= RoundsCount; counter += 1) {
+  for (let counter = 1; counter <= roundsCount; counter += 1) {
     const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
